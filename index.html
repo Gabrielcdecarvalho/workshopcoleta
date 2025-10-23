@@ -268,6 +268,15 @@
             border-left: 4px solid var(--secondary);
         }
         
+        .materials-info {
+            background: rgba(76, 175, 80, 0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+            border-left: 4px solid var(--accent);
+        }
+        
         .btn {
             display: inline-block;
             background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
@@ -506,74 +515,30 @@
             
             <!-- Countdown Section -->
             <div class="countdown-section">
-                <!-- Primeiro Countdown -->
+                <!-- Card de Inscrição -->
                 <div class="countdown-card">
-                    <h2 class="card-title"><i class="fas fa-calendar-day"></i> Inscrições - Primeiro Dia</h2>
-                    <p class="card-date">03 de Novembro de 2025</p>
+                    <h2 class="card-title"><i class="fas fa-calendar-check"></i> Inscrições Abertas</h2>
+                    <p class="card-date">Workshop Teórico e Prático - Coleta de Sangue Venoso</p>
                     
-                    <div class="timer" id="timer1">
-                        <div class="time-unit">
-                            <div class="time-value" id="days1">00</div>
-                            <div class="time-label">Dias</div>
-                        </div>
-                        <div class="time-unit">
-                            <div class="time-value" id="hours1">00</div>
-                            <div class="time-label">Horas</div>
-                        </div>
-                        <div class="time-unit">
-                            <div class="time-value" id="minutes1">00</div>
-                            <div class="time-label">Minutos</div>
-                        </div>
-                        <div class="time-unit">
-                            <div class="time-value" id="seconds1">00</div>
-                            <div class="time-label">Segundos</div>
-                        </div>
+                    <div class="materials-info">
+                        <i class="fas fa-exclamation-triangle"></i> <strong>ATENÇÃO - MATERIAIS OBRIGATÓRIOS:</strong><br>
+                        Todos os participantes deverão levar obrigatoriamente:
+                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                            <li>Jaleco</li>
+                            <li>Óculos de proteção individual</li>
+                            <li>Touca</li>
+                            <li>Máscara</li>
+                        </ul>
+                        <strong>Participantes que não tiverem esses materiais estarão sujeitos a não participarem do workshop.</strong>
                     </div>
                     
                     <div class="vaga-info">
-                        <i class="fas fa-exclamation-circle"></i> <strong>ATENÇÃO:</strong> Apenas 20 vagas disponíveis para este dia!
+                        <i class="fas fa-exclamation-circle"></i> <strong>VAGAS LIMITADAS:</strong> Apenas 30 vagas por dia!
                     </div>
                     
-                    <div id="link1-placeholder">
-                        <a class="btn btn-disabled">
-                            <i class="fas fa-lock"></i> Inscrições Aqui (Em Breve)
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Segundo Countdown -->
-                <div class="countdown-card">
-                    <h2 class="card-title"><i class="fas fa-calendar-day"></i> Inscrições - Segundo Dia</h2>
-                    <p class="card-date">04 de Novembro de 2025</p>
-                    
-                    <div class="timer" id="timer2">
-                        <div class="time-unit">
-                            <div class="time-value" id="days2">00</div>
-                            <div class="time-label">Dias</div>
-                        </div>
-                        <div class="time-unit">
-                            <div class="time-value" id="hours2">00</div>
-                            <div class="time-label">Horas</div>
-                        </div>
-                        <div class="time-unit">
-                            <div class="time-value" id="minutes2">00</div>
-                            <div class="time-label">Minutos</div>
-                        </div>
-                        <div class="time-unit">
-                            <div class="time-value" id="seconds2">00</div>
-                            <div class="time-label">Segundos</div>
-                        </div>
-                    </div>
-                    
-                    <div class="vaga-info">
-                        <i class="fas fa-exclamation-circle"></i> <strong>ATENÇÃO:</strong> Apenas 20 vagas disponíveis para este dia!
-                    </div>
-                    
-                    <div id="link2-placeholder">
-                        <a class="btn btn-disabled">
-                            <i class="fas fa-lock"></i> Inscrições Aqui (Em Breve)
-                        </a>
-                    </div>
+                    <a href="https://www.sympla.com.br/evento/jornada-academica-workshop-teorico-e-pratico-coleta-de-sangue-venoso/3182189" class="btn" target="_blank">
+                        <i class="fas fa-unlock"></i> FAZER INSCRIÇÃO
+                    </a>
                 </div>
             </div>
         </div>
@@ -618,7 +583,7 @@
                     </div>
                     <div>
                         <h3>Vagas</h3>
-                        <p>20 vagas por dia</p>
+                        <p>60 vagas totais</p>
                     </div>
                 </div>
             </div>
@@ -665,105 +630,6 @@
                 return false;
             }
         });
-        
-        // Configuração das datas de liberação
-        const releaseDate1 = new Date("October 1, 2025 18:00:00").getTime();
-        const releaseDate2 = new Date("October 2, 2025 15:00:00").getTime();
-        
-        // URLs dos formulários (armazenadas em variáveis)
-        const url1 = "https://docs.google.com/forms/d/e/1FAIpQLScnIH6EyZ7czA4bJcA2zDcL67-4Ehm-jIcudNp3DS6C6aaVXg/viewform";
-        const url2 = "https://docs.google.com/forms/d/e/1FAIpQLSfDpJfjFgr16cFNBi2o393he4NSRRcMhDz61vwVYuE6M2wjyA/viewform";
-        
-        // Elementos do primeiro countdown
-        const days1 = document.getElementById("days1");
-        const hours1 = document.getElementById("hours1");
-        const minutes1 = document.getElementById("minutes1");
-        const seconds1 = document.getElementById("seconds1");
-        const link1Placeholder = document.getElementById("link1-placeholder");
-        
-        // Elementos do segundo countdown
-        const days2 = document.getElementById("days2");
-        const hours2 = document.getElementById("hours2");
-        const minutes2 = document.getElementById("minutes2");
-        const seconds2 = document.getElementById("seconds2");
-        const link2Placeholder = document.getElementById("link2-placeholder");
-        
-        // Função para formatar números com zero à esquerda
-        function formatNumber(num) {
-            return num < 10 ? "0" + num : num;
-        }
-        
-        function updateCountdown() {
-            const now = new Date().getTime();
-            
-            // Primeiro countdown
-            const distance1 = releaseDate1 - now;
-            
-            if (distance1 < 0) {
-                // Tempo esgotado - liberar link
-                days1.innerHTML = "00";
-                hours1.innerHTML = "00";
-                minutes1.innerHTML = "00";
-                seconds1.innerHTML = "00";
-                
-                // Substituir o placeholder pelo link real
-                link1Placeholder.innerHTML = `
-                    <a href="${url1}" class="btn" target="_blank">
-                        <i class="fas fa-unlock"></i> FAZER INSCRIÇÃO - PRIMEIRO DIA
-                    </a>
-                `;
-                link1Placeholder.classList.add("pulse");
-            } else {
-                // Calcular tempo restante
-                const d1 = Math.floor(distance1 / (1000 * 60 * 60 * 24));
-                const h1 = Math.floor((distance1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const m1 = Math.floor((distance1 % (1000 * 60 * 60)) / (1000 * 60));
-                const s1 = Math.floor((distance1 % (1000 * 60)) / 1000);
-                
-                // Atualizar display
-                days1.innerHTML = formatNumber(d1);
-                hours1.innerHTML = formatNumber(h1);
-                minutes1.innerHTML = formatNumber(m1);
-                seconds1.innerHTML = formatNumber(s1);
-            }
-            
-            // Segundo countdown
-            const distance2 = releaseDate2 - now;
-            
-            if (distance2 < 0) {
-                // Tempo esgotado - liberar link
-                days2.innerHTML = "00";
-                hours2.innerHTML = "00";
-                minutes2.innerHTML = "00";
-                seconds2.innerHTML = "00";
-                
-                // Substituir o placeholder pelo link real
-                link2Placeholder.innerHTML = `
-                    <a href="${url2}" class="btn" target="_blank">
-                        <i class="fas fa-unlock"></i> FAZER INSCRIÇÃO - SEGUNDO DIA
-                    </a>
-                `;
-                link2Placeholder.classList.add("pulse");
-            } else {
-                // Calcular tempo restante
-                const d2 = Math.floor(distance2 / (1000 * 60 * 60 * 24));
-                const h2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const m2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
-                const s2 = Math.floor((distance2 % (1000 * 60)) / 1000);
-                
-                // Atualizar display
-                days2.innerHTML = formatNumber(d2);
-                hours2.innerHTML = formatNumber(h2);
-                minutes2.innerHTML = formatNumber(m2);
-                seconds2.innerHTML = formatNumber(s2);
-            }
-        }
-        
-        // Inicializar
-        updateCountdown();
-        
-        // Atualizar a cada segundo
-        setInterval(updateCountdown, 1000);
         
         // Mostrar fallback se a imagem não carregar
         window.addEventListener('load', function() {
